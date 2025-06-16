@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A + quiz</title>
+    <link rel="stylesheet" href="CSS/stylesheet.css">
+    <style>
+        .form-dec{
+            /* this is my styleization for my form main area i gave my form a background color of orange and black text i made it leave 20px of space between the border and content 
+            speaking of the border it is black 6px and solid */
+            background-color:#ffa500;
+            color:black;
+            padding:30px;
+            border:black 6px solid;
+        }
+        #flex-align{
+            /* here i needed to align my button so with the right prefic=xes i gave it a display of flex and moved the button to the center of the container */
+            display:flex;
+            display:-ms-flexbox;
+            justify-content:center;
+            -ms-flex-pack:center;
+        }
+        .animatitt-button {
+            /* this is my CSS for the button itself first i took away the border and made the text color white so i can maake the button color red and blaack later on i made the font size 18px
+            for readability and padding of 30px. then i added an animation that pulses takes ten seconds to complete and continuously repeats foreverand the needed prefix. then i added a transition that makes the \
+            transform look nice rather than choppy it quickly but smoothly eases you into the transform and it changes the background color in 3seconds */
+            padding: 30px;
+            font-size: 1.125rem;
+            background-color: #990000;
+            color: white;
+            border: none;
+            animation: pulse 10s infinite;
+            -webkit-transition: -webkit-transform 1s ease, background-color 3s ease;
+            -moz-transition: -moz-transform 1s ease, background-color 3s ease;
+            -o-transition: -o-transform 1s ease, background-color 3s ease;
+            transition: transform 1s ease, background-color 3s ease;
+            -webkit-animation: pulse 10s infinite;
+        }
+        .animatitt-button:hover {
+            /* this is my transfom that happens when you hover over the button it scales up the button my 1.8 and makes it big with every prefix needed and changed the background color to balck at the same time */
+            transform: scale(1.8);
+            -webkit-transform: scale(1.8);
+            -moz-transform: scale(1.8);
+            -ms-transform: scale(1.8);
+            -o-transform: scale(1.8);
+            background-color: #000000;
+        }
+        @keyframes pulse {
+            /* this is the keyframes for my animation so it lasts 10 seconds and at around 6 seconds it should be fully expanded and red bordered and then shoulkd slowly turn back to black
+            and shrink back into the button */
+            0% { box-shadow: 0 0 0 0 #000000; }
+            60% { box-shadow: 0 0 0 10px #990000; }
+            100% { box-shadow: 0 0 0 0 #000000; }
+        }
+        @-webkit-keyframes pulse {
+            /* this is the same keyframes just with the webkit prefix */
+            0% { box-shadow: 0 0 0 0 #000000; }
+            60% { box-shadow: 0 0 0 10px #990000; }
+            100% { box-shadow: 0 0 0 0 #000000; }
+        }
+    </style>
+</head>
+<body>
+    <div tabindex="1" id="nav-and-header"> 
+        <!-- this is my nav and header with my 4 web pages linked  -->
+        <header>
+            <h1> Q&A + quiz </h1>
+        </header>
+        <nav>
+            <ul>
+                <li> <a tabindex="2" class="nav-link" href="index.html" >Atomic Timeline</a></li>
+                <li> <a tabindex="3" class="nav-link" href="Nuclear-bomb.html" >Nuclear bombs</a></li>
+                <li> <a tabindex="4" class="nav-link" href="Hydrogen-bomb.html" >Hydrogen bombs</a></li>
+                <li> <a tabindex="5" id="link-nav" href="Q&A.html"> Q&A + quiz</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <section>
+        <script>
+            // this is my javasript that makes you do a quiz using research prompt and windows alert and it tells ytou if you got the right answers or not  though its only 3 questions
+            let question1 = prompt("what scieticst discovered background radiation?");
+            if (question1.toLowerCase() === "antoine henri berequel") {
+            alert("Good job! The answer was Antoine Henri Berequel");
+            } else {
+            alert("Good effort! The answer was: Antoine Henri Berequel");
+            }
+            let question2 = prompt("what type of chemical reaction does a nuclear bomb use?");
+            if (question2.toLowerCase() === "nuclear fission") {
+            alert("Good job! The answer was Nuclear Fission");
+            } else {
+            alert("Good effort! The answer was Nuclear Fission");
+            }
+            let question3 = prompt("What was the biggest Hydrogen bomb detonated called?");
+            if (answer3.toLowerCase() === "tzar bomba") {
+            alert("Good job! The answer was Tzar Bomba");
+            } else {
+            alert("Good effort! The answer was Tzar Bomba");
+            }
+            alert("Quiz complete! Keep learning scientists!");
+        </script>
+    </section>
+    <br/>
+    <br/>
+    <main>
+        <form tabindex="6" class="form-dec" method="get" name="q&a-form-for-user" id="q&a-form">
+            <!-- this is my form that people need to fill out if they want to ask a question change a peice of information or contacxt us about something and allows them to express what they are looking for -->
+            <fieldset form="q&a-form" name="question-form">
+                <legend><h2>Submit your question and we will get back to you with your answer ASAP</h2></legend>
+                <h3 id="yellow-warning"> fill out every feild that has an astrix * otherwise the submition will not work </h3>
+                <label for="fname" > * Enter your first name: </label>
+                <input tabindex="7" type="text" id="fname" name="firstname" required>
+                <br/>
+                <br/>
+                <label for="lname"> * Enter your last name:</label>
+                <input tabindex="8" type="text" id="lname" name="lastname" required>
+                <br/>
+                <br/>
+                <h3> * what are you looking to contact us about? (select one)</h3>
+                <br/>
+                <label for="change"> There has been a fault in information or something is missing </label>
+                <input tabindex="9" type="radio" id="change" name="why">
+                <br/>
+                <label for="question"> I have a question that hasnt been answered on the website </label>
+                <input  tabindex="10" type="radio" id="question" name="why">
+                <br/>
+                <label for="inquire"> I would like to inquire about something else </label>
+                <input tabindex="11" type="radio" id="inquire" name="why">
+                <br/>
+                <br/>
+                <label for="typing-room"> please list as detailed as possible your question, information, or inquiry:</label>
+                <br/>
+                <textarea tabindex="12" id="typing-room" name="tellus" rows="12" cols="45"> </textarea>
+            </fieldset>
+            <input tabindex="13" type="submit" value="submit">
+        </form>
+    </main>
+    <br/>
+    <br/>
+    <br/>
+    <section>
+        <div id="flex-align">
+            <!-- this is my animated button that i use to not only surprise but thank users for using and visiting my website -->
+            <button tabindex="14" class="animatitt-button">Thank you for visiting my website.. <br/> (Hover over me for something cool)</button>
+        </div>
+    </section>
+    <br/>
+    <br/>
+    <br/>
+    <footer>
+        <!-- this is my footer with my social media linked down here and my copywrite included -->
+        <ul>
+            <li><a tabindex="15" class="footer-link" href="https://www.instagram.com/" target="_blank"> Follow us on Instagram </a></li>
+            <li><a tabindex="16" class="footer-link" href="https://www.tiktok.com/" target="_blank"> Follow us on Tiktok </a></li>
+            <li><a tabindex="17" class="footer-link" href="https://www.facebook.com/" target="_blank"> Follow us on Facebook </a></li>
+            <li><a tabindex="18" class="footer-link" href="https://www.x.com/" target="_blank"> Follow us on X </a></li>
+        </ul>
+        <p> &copy; Learn about atomic bombs | all rights reserved </p>
+    </footer>
+</body>
+</html>

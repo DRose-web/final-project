@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Bombs</title>
+    <link rel="stylesheet" href="CSS/stylesheet.css">
+    <style>
+        body{
+            /* i made my backgorund an image and wanted a different image on each oage so it will be in my indertanl styleshhet i made it so that the background takes up the whole space it is given and repeats itself if it needs to */
+            background-image: url(images/hiroshima-bombing-article-about-atomic-bomb.jpg);
+            background-repeat:repeat;
+            background-size: 100%;
+        }
+        #detonation-dec{
+            /* this is my stylization for my combustion mehtod div the background is dRK RED  and the font color is white it has a border that is 5px solid and black
+            it has 20px of padding all around and 30px of margin on the bottom with 50px margin on each side and 10px of margin on the top i also made that the inside text is aligned to the center */
+            background-color:#990000;
+            color:white;
+            border:black 5px solid;
+            padding:20px;
+            margin:10px 50px 30px 50px;
+            text-align:center;
+        }
+        #flex-cont{
+            /* this is my flexbox setup for my two divs i gave it a display of flex with the prefixes and a justify content of space between for null space */
+            display:flex;
+            display:-ms-flexbox;
+            justify-content:space-between;
+            -ms-flex-pack:distribute;
+        }
+        #item1{
+            /* this is my firat div it has a borde of 5px solid black and the background-color is orangefor contrast as the image is clear in the background i cave it a text color of black
+            15px of padding and 30px of margin for good measure of null spcae */
+            border:solid black 5px;
+            padding:15px;
+            margin:30px;
+            background-color:orange;
+            color:black;
+        }
+        #item2{
+            /* this is my second div which also has a black solid border of 5px the background color is yellow and the text i input is aligned to the center of the div. i gave it 
+            a font color of black and 15px of padding and 30px of margin for spacing reasons */
+            border:solid black 5px;
+            padding:15px;
+            margin:30px;
+            background-color:yellow;
+            color:black;
+            text-align:center;
+        }
+        .light-link{
+            /* this is for the links that are in the figcaptions of the images so the color is black text for links to images that are on the light background */
+            color:black;
+        }
+        .dark-link{
+            /* this is for the links that are in the figcaptions of the images so the color is white text for links to images that are on the dark background */
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div tabindex="1" id="nav-and-header"> 
+        <!-- this is my nav and header with my 4 web pages linked  -->
+        <header>
+            <h1> The Nuclear Bomb </h1>
+        </header>
+        <nav>
+            <ul>
+                <li> <a tabindex="2" class="nav-link" href="index.html" >Atomic Timeline</a></li>
+                <li> <a tabindex="3" class="nav-link" href="Nuclear-bomb.html" >Nuclear bombs</a></li>
+                <li> <a tabindex="4" class="nav-link" href="Hydrogen-bomb.html" >Hydrogen bombs</a></li>
+                <li> <a tabindex="5" id="link-nav" href="Q&A.html"> Q&A + quiz</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <main>
+        <div tabindex="6" id="detonation-dec">
+            <!-- this main part of my webpage describes how the atomic bombs actually detonate and what elements it uses to do so  -->
+            <h2> Detonation methods and elemental isotopes </h2>
+            <h4> The two main detonation methods are Gun type and implosion type detonation methods (see diagrams below)</h4>
+            <figure>
+                <img src="images/Fission Bomb Assembly Wikimedia Commons.jpg"  alt="diagram of a gun type assembly method and of an implosion detonation method " style="width:25%">
+                <figcaption><a tabindex="7" class="dark-link" href="https://ahf.nuclearmuseum.org/ahf/history/science-behind-atom-bomb/" target="_blank"> View this image at atomic heritage foundation</a></figcaption>
+            </figure>
+            <p> The two bombs I  will talk about in specific are fat man and little boy which are the one that were dropped on Japan in 1945. <br/>
+            Little boy used Uranium isotope U-235 and the gun type detonation method. This means that a highly reactive or explosive chemical element get rapidly shot into a 
+            2 peice U-235 core which then collides the two together and kickstarts the fission reaction (refer to section below for more information). On the other hand Fat man 
+            utilizes the implosion detonation method which uses elecromagnetic waves and signals to bbegin a chemical reaction in the outer rings of reactive chemical elements 
+            then generate so much heat and pressure that it pushes the plutonium isoptope Pu-239 core more and more while the inside of the core is doing the same due to the nuclear
+            fission reaction until it eventually implodes on itself and releases all of its force and energy. </p>
+            <h4> Why did they use 2 types of elemental cores?</h4>
+            <p>At first the they used Uranium 235 in the original little boy but they realised that it was unethical and extremely difficult to atttian a critical amount of 
+                U-235 as they had to work endlessly to seperate it from its already uncommon isotopes U-239 and U-238. They then found out that they can use a plutonium core instead
+                specifically Pu-239 which is not a natural isotope and can efficiently be made in a nclear reactor which provides a simpler and more stable source of the element.
+            </p>
+        </div>
+    </main>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <section>
+        <!-- this section talks about what nuclear fission is and how it works this is what allows for the bomb to explode there is also a nice diagram to help -->
+        <div id="flex-cont">
+            <div tabindex="8" id="item1">
+                <figure>
+                    <img src="images/Fission Chain Reaction.png" alt="diagram of a nuclear fission chain reaction (NEUTRON SPLITS AN ATOM)" style="width:100%;">
+                    <figcaption><a tabindex="9" class="light-link" href="https://ahf.nuclearmuseum.org/ahf/history/nuclear-fission/" target="_blank">View this image at atomic heritage foundation for nuclear fission</a></figcaption>
+                </figure>
+            </div>
+            <div tabindex="9" id="item2">
+                <h2> Nuclear fission </h2><br/>
+                <h3> Nuclear fission is a chain reaction that releases energy</h3><br/>
+                <p> The diagram you see is a chain reaction that causes nuclear bombs to detonate. <br/>
+                    How it works is a rogue neutron gets rapidly shot into an atom in this case the atom is a U-235 atom. The neutron shoots straight through the atom and <br/>splits 
+                    its nucleus theoretically in 'half' but that has not been proven. This splitting of the nucleas causes three outcomes:<br/><br/>
+                    1. It splits the atom into two smaller atoms<br/>
+                    2. It releases an imense amount of energy <br/>
+                    3. It spews out 1-3 neutrons from it s nucleus <br/><br/>
+                    The splitting of the nucleus of the atom turning it into two lighter nuclei and from the tearing and interuption of a nuclear force come a rather large<br/>
+                    burst of energy. The nucleus, in the proccess of tearing releases 1-3 neutrons which then rapidly fly out to other nearby atoms. One neutron may fuse<br/> with a nearby
+                    atom, another may just miss an atom entirely and float around until it finds a nucleus to fuse with, the final one may strike through another atom and<br/> split it s nucleus
+                    which causes another fission reaction and continues the chain reaction.</p>
+            </div>
+        </div>
+    </section>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <footer>
+        <!-- this is my footer with my social media linked down here and my copywrite included -->
+        <ul>
+            <li><a tabindex="10" class="footer-link" href="https://www.instagram.com/" target="_blank"> Follow us on Instagram </a></li>
+            <li><a tabindex="11" class="footer-link" href="https://www.tiktok.com/" target="_blank"> Follow us on Tiktok </a></li>
+            <li><a tabindex="12" class="footer-link" href="https://www.facebook.com/" target="_blank"> Follow us on Facebook </a></li>
+            <li><a tabindex="13" class="footer-link" href="https://www.x.com/" target="_blank"> Follow us on X </a></li>
+        </ul>
+        <p> &copy; Learn about atomic bombs | all rights reserved </p>
+    </footer>
+</body>
+</html>

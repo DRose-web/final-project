@@ -1,0 +1,134 @@
+/* anagulous color scheme red orange yellow black white. I chose these colors because i think it looks nice and these colors are the same colors that you would most
+likely see when an atomic bomb goes off. The red i used is deep and calm but prominent and serious looking. Alongside that the yellow and orange are much brighter and
+balance out that seriousness with a happy and eye catching color . It also lookes good on white and black which is my base colors or my neutrals. The three colors are 
+more poppy which is good because that means they wont get mixed up in the background-image which i think looks really nice as a black and white image. i use white for 
+both contrast and highlighting things. I used black as my groudning and bolding color which i can also use to accentuate features or colors and to add contrast.
+ */
+.nav-link{
+    /* Here i styled the links of my nav bar I wanted to try this cool display of having ike seperation lines rather than an entire border so i just gave each link a thin border
+    on only one side . I made the color of the links themselves orange and removed the underline that a link would usually have . I made the border color white and solid so it looked
+    clean and proffessional. I gave it some padding or space between the content and the border so that the line was not stuck directly onto the links it makes it look weird and i 
+    made the links appear bigger so it catches more attention and is easy to find */
+    border-width: 0px 2px 0px 0px ;
+    color:#ffa500;
+    text-decoration:none;
+    border-color:white;
+    border-style: solid;
+    padding:35px;
+    font-size:1.5rem;
+}
+nav li{
+    /* here i just madd it so that the list item would display as inline because otherwid=se the nav bar which is in an unordered list whould show as a block element */
+    display:inline;
+}
+#nav-and-header{
+    /* here i styled the nav abr and heading div itself which is the black section at the top of the screen. i gave it a display of flex and with the required prefixes made it 
+    so that there was space around the items in the div so the nav  bar had a good distance from the edge and the heading and vise versa. The i used align items also with the prefixes 
+    to center the two items in the same place as they were a bit off. i made the text color white for the heading and contrast. i mad the background-color black because i need the nav bar to stick out and plus it looks good 
+    i have the div a padding of 30 at the top and bottom and a pading of 10 on the right with no padding on the right. i also gave it 0 margin. finally i gave it a position of fixed 
+    so that the nav bar would stay in the same plaace (at the top) the whole time you look throught the website and scroll throught he webpage. i used the top left and right to position the nav 
+    bar at the top and fill in the left and right edges of the weboage. i gave it a font-0size of 2.625rem. */
+    display:flex;
+    display:-ms-flexbox;
+    width:100%;
+    justify-content:space-around;
+    -ms-flex-pack:distribute;
+    align-items:center;
+    -ms-flex-align:center;
+    color:white;
+    background-color:black;
+    padding:30px 10px 30px 0px;
+    margin:0px 0px 0px 0px;
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    font-size:2.625rem;
+}
+#link-nav{
+    /* this is the same styling as nav link i just neesed this link to have no border so that there was not any random lines on the outside where it doesnt need to split anything */
+    color:#ffa500;
+    text-decoration:none;
+    padding:35px;
+    font-size:1.5rem;
+}
+.nav-link:hover{
+    /* i made it so that when you haver over the link it will turn white to show that you are hovering it */
+    color:white;
+}
+.nav-link:focus{
+    /* same thing as the above one but its when you focus on it it turns white */
+    color:white;
+}
+#link-nav:hover{
+    /* same as the last 2 things but for the seperately styled no border link */
+    color:white;
+}
+#link-nav:focus{
+    /*same thing just turns white when you focus on it*/
+    color:white;
+}
+html{
+    /* here i set the default font-size of the html tag to 62.5% which is common practice in web developement */
+    font-size:62.5%;
+}
+p{
+    /* i set the font size of th eparagraph tag to 1.125 rem which is the smallest font-sixe on this website */
+    font-size:1.125rem;
+}
+h1{
+    /* i mad ethe font size of the h1 tag 2.625rem which is the largest heading and font in this website i also changed its font-fqmily to a serif font to show the importasnce of the h1
+    tag as there is only one used per website */
+    font-size:2.625rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+h2{
+    /* i m,ade the font-size for the h2 tag 2.375rem which is the second biggest heading on my website and the rest of the heading font family is sans serif ike the rest of the website */
+    font-size:2.375rem;
+}
+h3{
+    /*this is the third largest font size on my website adn i set it to 2.125 rem*/
+    font-size:2.125rem;
+}
+h4{
+    /* this is the fourth largest heading on my website and i set the size to 1.875 rem */
+    font-size:1.875rem;
+}
+h5{
+    /* i set the font size of my h5 atg to 1.625 em which is the 2 smallest heaing on my website */
+    font-size:1.625rem;
+}
+h6{
+    /* thiu is my smallest heaidng on my website and i set it to 1.375 rem */
+    font-size:1.375rem;
+}
+body{
+    /* i made the background color of the body tag white and the default text color black . I set the font-fmaily to a sans serif fammily as i wanted my website to look modern young and relate to younger highschool students
+    to improve readbility i set the line height to 30px the space between each letter to 1px and the spacing between whole words to 5px away */
+    color:black;
+    background-color:white;
+    word-spacing:5px;
+    letter-spacing:1px;
+    line-height:30px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+footer{
+    /* i made my footers background-color black and the text color white to match my nav bar i gave it no margin to have it stick to the sides of the screen instead of 
+    have room between them and i made the space between the edge of the container and the inside content 20px */
+    background-color:black;
+    color:white;
+    padding:20px;
+    margin:0px;
+    text-align:center;
+}
+.footer-link{
+    /* i made the color of the links in my footer to orange to also match my nav bar and to add a bit of color to the footer. i gave each of them a margin of 
+    5px all around os that way they dont stick together as much */
+    color: #ffa500;
+    margin:5px;
+}
+footer li{
+    /* i made the list item display as inline again same as the nav bar and made the content start at the left */
+    display:inline;
+    text-align:left;
+}

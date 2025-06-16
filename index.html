@@ -1,0 +1,573 @@
+<!--name: Dana R
+    teacher: Ms.Hoitink
+    class: Web Dev 10s
+    date last modified: june 8 2025 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atomic Bomb timeline</title>
+    <link rel="stylesheet" href="CSS/stylesheet.css">
+    <style>
+        body{ 
+            /* i made my backgorund an image and wanted a different image on each oage so it will be in my indertanl styleshhet i made it so that the background takes up the whole space it is given and repeats itself if it needs to */
+            background-image: url(images/RDS1.jpg);
+            background-repeat:repeat;
+            background-size: 100%;
+        }  
+        #grid-timeline{
+            /* This is my grid container and grid setup for my "timeline" that i have going on. i agve the container a display of grid which i used the proper prefix for and then with the prefixes aswell i made the grid template 
+            i made it so that there were 12 even squares and horizontally and 47 even squares vertically  */
+            display: grid;
+            display:-ms-grid;
+            grid-template-columns: repeat(12, 1fr); 
+            -ms-grid-template-columns: repeat(11, 1fr); 
+            grid-template-rows: repeat(47, 1fr);   
+            -ms-grid-template-rows: repeat(47, 1fr); 
+        }
+        #item1{
+            /* this grid item i gave it a black solid border that is 5px wide i gave it 10 pixels of padding and 10pixels of margin all around i made the etext color black and the 
+            background-color yellow . with the right prefixes i set it to take up half of the page horizontally, and then i made it take up room from the 1st to 7th "row" which is actually a column */
+            padding:10px;
+            margin:10px;
+            border:solid 5px black;
+            background-color:#ffff00;
+            color:black;
+            grid-column:1/7;
+            -ms-grid-column:1/7;
+            -ms-grid-row:1/8;
+            grid-row:1/8;
+        }
+        #item2{
+            /* this grid item i gave it a black solid border that is 5px wide i gave it 10 pixels of padding and 10pixels of margin all around i made the text color white and the 
+            background-color red . with the right prefixes i set it to take up the other half half of the page horizontally, and then i made it take up room from the 6th to 13th "row" which is actually a column */
+            padding:10px;
+            margin:10px;
+            border:solid 5px black;
+            background-color:#990000;
+            color:#ffffff;
+            grid-column:7/13;
+            -ms-grid-column:7/13;
+            -ms-grid-row:6/13;
+            grid-row:6/13;
+        }
+        #item3{
+            /* this grid item i gave it a black solid border that is 5px wide i gave it 10 pixels of padding and 10pixels of margin all around i made the etext color black and the 
+            background-color yellow . with the right prefixes i set it to take up half of the page horizontally, and then i made it take up room from the 11th to 18th "row" which is actually a column */
+            padding:10px;
+            margin:10px;
+            border:solid 5px black;
+            background-color:#ffff00;
+            color:black;
+            grid-column:1/7;
+            -ms-grid-column:1/7;
+            -ms-grid-row:11/18;
+            grid-row:11/18;
+        }
+        #item4{
+            /* this grid item i gave it a black solid border that is 5px wide i gave it 10 pixels of padding and 10pixels of margin all around i made the text color white and the 
+            background-color red . with the right prefixes i set it to take up the other half half of the page horizontally, and then i made it take up room from the 16th to 23rd "row" which is actually a column */
+            padding:10px;
+            margin:10px;
+            border:solid 5px black;
+            background-color:#990000;
+            color:#ffffff;
+            grid-column:7/13;
+            -ms-grid-column:7/13;
+            -ms-grid-row:16/23;
+            grid-row:16/23;
+        }
+        #item5{
+            /* this grid item i gave it a black solid border that is 5px wide i gave it 10 pixels of padding and 10pixels of margin all around i made the etext color black and the 
+            background-color yellow . with the right prefixes i set it to take up half of the page horizontally, and then i made it take up room from the 21st to 28th "row" which is actually a column */
+            padding:10px;
+            margin:10px;
+            border:solid 5px black;
+            background-color:#ffff00;
+            color:black;
+            grid-column:1/7;
+            -ms-grid-column:1/7;
+            -ms-grid-row:21/28;
+            grid-row:21/28;
+        }
+        #item6{
+            /* this grid item i gave it a black solid border that is 5px wide i gave it 10 pixels of padding and 10pixels of margin all around i made the text color white and the 
+            background-color red . with the right prefixes i set it to take up the other half half of the page horizontally, and then i made it take up room from the 26th to 33rd "row" which is actually a column */
+            padding:10px;
+            margin:10px;
+            border:solid 5px black;
+            background-color:#990000;
+            color:#ffffff;
+            grid-column:7/13;
+            -ms-grid-column:7/13;
+            -ms-grid-row:26/33;
+            grid-row:26/33;
+        }
+        #item7{
+            /* this grid item i gave it a black solid border that is 5px wide i gave it 10 pixels of padding and 10pixels of margin all around i made the etext color black and the 
+            background-color yellow . with the right prefixes i set it to take up half of the page horizontally, and then i made it take up room from the 13th to 38th "row" which is actually a column */
+            padding:10px;
+            margin:10px;
+            border:solid 5px black;
+            background-color:#ffff00;
+            color:#000000;
+            grid-column:1/7;
+            -ms-grid-column:1/7;
+            -ms-grid-row:13/38;
+            grid-row:31/38;
+        }
+        #item8{
+            /* this grid item i gave it a black solid border that is 5px wide i gave it 10 pixels of padding and 10pixels of margin all around i made the text color white and the 
+            background-color red . with the right prefixes i set it to take up the other half half of the page horizontally, and then i made it take up room from the 36th to 43rd "row" which is actually a column */
+            padding:10px;
+            margin:10px;
+            border:solid 5px black;
+            background-color:#990000;
+            color:#ffffff;
+            grid-column:7/13;
+            -ms-grid-column:7/13;
+            -ms-grid-row:36/43;
+            grid-row:36/43;
+        }
+        #item9{
+            /* this grid item i gave it a black solid border that is 5px wide i gave it 10 pixels of padding and 10pixels of margin all around i made the etext color black and the 
+            background-color yellow . with the right prefixes i set it to take up half of the page horizontally, and then i made it take up room from the 41st to 48th "row" which is actually a column */
+            padding:10px;
+            margin:10px;
+            border:solid 5px black;
+            background-color:#ffff00;
+            color:black;
+            grid-column:1/7;
+            -ms-grid-column:1/7;
+            -ms-grid-row:41/48;
+            grid-row:41/48;
+        }
+        #item10{
+            /* the 10th grid item doesnt actually use grid it is there to let the person know of the order of the timeline from past to present as you scroll . i gave it a padding of 10px and a margin of 10px aswell
+            i agve it a black solid 5px wide border this time i made the background color white and the text black just so you can differencieate the information from the explanation */
+            padding:10px;
+            margin:10px;
+            border:solid 5px black;
+            background-color:white;
+            color:black;
+        }
+        .yellowline-span{
+            /* here i just made my spans that i used on the yellow background red rather than the black text */
+            color:#990000;
+        }
+        .redline-span{
+            /* nd on this one i made the span yellow on the red background instead of the wite text to emphasize points */
+            color:#ffff00;
+        }
+        .fig-link{
+            /* this is jsut me stylizing the figcaption link for the i frames. I gave it a border that is also solid and black butt now it is 3px rather than 5 the background color is red 
+            since these links are on the yellow background and i have the link a color  of white for visability and contrast and of course padding of 10px so the link button thing isnt crammed toether and looks weird */
+            border:black 3px solid;
+            background-color:#990000;
+            color:white;
+            padding:10px;
+        }
+        .light-link{
+            /* this is for the links that are in the figcaptions of the images so the color is black text for links to images that are on the light background */
+            color:black;
+        }
+        .dark-link{
+            /* this is for the links that are in the figcaptions of the images so the color is white text for links to images that are on the dark background */
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <!-- this is my nav and header with my 4 web pages linked  -->
+    <h1 id="pickle"> heloooo</h1>
+    <div tabindex="1" id="nav-and-header"> 
+        <header>
+            <h1> Atomic Bomb Timeline </h1>
+        </header>
+        <nav>
+            <ul>
+                <li> <a tabindex="2"class="nav-link" href="index.html" >Atomic Timeline</a></li>
+                <li> <a tabindex="3"class="nav-link" href="Nuclear-bomb.html" >Nuclear bombs</a></li>
+                <li> <a tabindex="4"class="nav-link" href="Hydrogen-bomb.html" >Hydrogen bombs</a></li>
+                <li> <a tabindex="5"id="link-nav" href="Q&A.html"> Q&A + quiz</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <!-- this is my main information that is about the atomic timeline and how and why everything happened who discovereds what, when, why, and more, read more to find out.  -->
+    <main><div tabindex="6" id="grid-timeline">
+        <div tabindex="7" id="item1"> 
+            <!-- this is the section about mainly antoine henri berequel who discovered natural radioactivity -->
+            <h2> 1896:</h2>
+            <h3> Henri Becquerel discovers natural radioactivity </h3>
+            <h4> key discoveries: </h4>
+            <ol>
+                <li><h5>Natural radioactivity</h5></li>
+                <li><h5>Foundational nuclear physics</h5></li>
+                <li><h5>foundation for the understanding of nuclear decay </h5></li>
+            </ol>
+            <p> Antoine Henri Becquerel was born in Paris on December 15, 1852, into a family of renowned scientists. His father, Alexander Edmond Becquerel, and grandfather, 
+                Antoine César, were both accomplished physicists. After studying at the Polytechnic and becoming an engineer in 1877, he earned his doctorate in 1888 and held 
+                several academic positions, eventually becoming a professor at the Paris Museum and the Polytechnic. His early research focused on light polarization, 
+                phosphorescence, and magnetism. In 1896, he discovered <span class="yellowline-span">natural radioactivity</span> while investigating the relationship between X-rays and phosphorescent uranium 
+                salts. He found that uranium emitted rays that fogged photographic plates and could ionize gases, differing from X-rays by being deflected by electric and 
+                magnetic fields. For this discovery, he shared the 1903 Nobel Prize in Physics with Pierre and Marie Curie. Becquerel published widely and was honored by various
+                scientific academies. He became a member of the French Academy of Sciences in 1889 and received the Legion of Honour in 1900. He was married to Mille Janin and
+                had a son, Jean, who continued the family s scientific legacy. Becquerel died on August 25, 1908, in Le Croisic.</p>
+            <h6>Antoine Henri Becquerels research along side some others such as Marie Curie lead to the new found understanding of nuclear decay and nuclear physics</h6>
+            <p> Nuclear physics is the branch of physics that studies the <span class="yellowline-span">nucleus of the atom the dense center made up of protons and neutrons</span>. It explores how nuclei behave,
+                how they interact, and the forces that hold them together. It s essential for understanding things like nuclear energy, radioactive materials, and particle 
+                physics. Nuclear decay (or radioactive decay) is a natural process where an unstable atomic nucleus loses energy by emitting radiation. This can happen in 
+                several ways:</p>
+            <ol>
+                <li><p>Alpha decay: the nucleus emits an alpha particle (2 protons and 2 neutrons).</p></li>
+                <li><p>Beta decay: a neutron changes into a proton (or vice versa), releasing a beta particle (an electron or positron)</p></li>
+                <li><p>Gamma decay: the nucleus releases excess energy as gamma rays without changing its structure</p></li>
+            </ol>
+            <p>Nuclear decay transforms one element into another and is the source of radiation from substances like uranium and carbon-14. It s used in medicine (cancer 
+                treatment), energy (nuclear reactors), and science (carbon dating, particle physics).</p>
+            <figure>
+                <img src="images/becquerel-12834-content-portrait-mobile-tiny.webp" alt="image of perusian scientist henri berequel" style="width:30%;">
+                <img src="images/Radioactive-Decay-Feature-1-678x378.png" alt="diagram of Uranium isotope 238 and its alpha gamma and beta decay" style="width:60%;">
+                <figcaption><a tabindex="8" class="light-link" href="https://www.nobelprize.org/prizes/physics/1903/becquerel/biographical/" target="_blank">Veiw image at nobel prize oragnization</a>
+                <a tabindex="9" class="light-link" href="https://earthhow.com/radioactive-decay-isotopes/" target="_blank"> Veiw image at radioactive decay isotiopes</a></figcaption>
+            </figure>
+        </div>
+        <div tabindex="10" id="item2">
+            <!-- this section is about einstein and his  e=mc^2 equation -->
+            <h2>1905:</h2>
+            <h3>Eintstiens theory of mass-energy equivalence</h3>
+            <h4>key discoveries:</h4>
+            <ol>
+                <li><h5>The famous E = mc^2 equation</h5></li>
+                <li><h5>Mass can be converted into massive amounts of energy</h5></li>
+                <li><h5>A principle at the heart of nuclear explosions</h5></li>
+            </ol>
+            <p>Einstein's famous equation <span class="redline-span">E = mc²</span> didn t appear in his first paper in that form. He originally wrote it as m = L/c², using L to represent energy. Later, he 
+                revised it to E = mc², showing that mass and energy are two forms of the same thing—a groundbreaking idea at the time.</p>
+            <p>This equation means that a small amount of mass can be converted into a huge amount of energy because it s multiplied by the speed of light squared (c²),
+                which is about 90 billion km²/s². For example, converting a penny entirely to energy could power New York City for two years, and a paper clip could release the 
+                energy of the <span class="redline-span">Hiroshima bomb</span>. However, such conversions are only possible under extreme conditions, beyond what we can create on Earth.</p>
+            <p>Symbols from the equation mean:</p>
+            <ol>
+                <li><p>E = energy</p></li>
+                <li><p>M = mass</p></li>
+                <li><p>C = speed of light (about 300 000 km/s) ^2 squared </p></li>
+            </ol>
+            <p>The speed of light is squared because energy <span class="redline-span">increases</span> with the square of speed. This is a fundamental aspect of how energy 
+                works in physics. Einstein s equation shows that matter and energy are interchangeable. Light, mass, and even radiation are connected at a fundamental level. 
+                While we usually see them as completely different, nature treats them as versions of the same thing. Today, E = mc² is essential in fields like <span class="redline-span">nuclear energy</span>, 
+                particle physics, and astronomy, helping us understand how stars burn, how atoms split, and how mass can be turned into energy. It s not just a formula, it s one 
+                of the most important insights in science.</p>
+            <figure>
+                <img src="images/1_MUYn6wNZgZuaCu2G3pcgFQ-e1723066380603.webp" alt="einstein and his developed equation" style="width:100%;">
+                <figcaption><a tabindex="11" class="dark-link" href="https://bigthink.com/starts-with-a-bang/meaning-emc2/" target="_blank"> Veiw this image at big think </a></figcaption>
+            </figure>
+            </div>
+        <div tabindex="12" id="item3"> 
+            <!-- this section is about how nuclear fission was discovered and what it led to. this discovery changed science forever -->
+            <h2> 1938: </h2>
+            <h3>Nuclear fission was discovered</h3>
+            <h4>Key discoveries:</h4>
+            <ol>
+                <li><h5>Uranium atoms and their nuclei can be split</h5></li>
+                <li><h5>Nuclear fission releases incredible amounts of energy</h5></li>
+                <li><h5>Laid the basics for nuclear bombs</h5></li>
+            </ol>
+            <p>In the early 19th century, scientists believed in the caloric theory, which treated heat as a substance. This view began to change with the work of <span class="yellowline-span">James Prescott 
+                Joule</span>, a brewer turned physicist who helped lay the foundation for the first law of thermodynamics, the conservation of energy. Joule, born in 1818, 
+                had a strong interest in science from a young age. While managing his family's brewery, he conducted experiments using homemade equipment. He initially compared 
+                the efficiency of steam engines and electric motors, discovering that steam engines produced more work. This sparked his interest in how heat and mechanical 
+                work were connected. In the early 1840s, Joule discovered that heat is generated by energy transformations, not just transferred. He developed Joule s Law, showing 
+                that the heat produced by electric current is related to resistance and current squared. His experiments eventually proved that <span class="yellowline-span">mechanical energy could be converted 
+                into heat</span>, challenging the caloric theory. His most famous experiment involved using falling weights to turn a paddle wheel in water, which slightly raised the water s 
+                temperature demonstrating that work creates heat. Though many doubted his precise measurements, his accuracy was helped by his background in brewing and collaboration 
+                with expert instrument makers. Joule later partnered with William Thomson (Lord Kelvin), and together they discovered the Joule-Thomson effect, where expanding 
+                gases cool under certain conditions. Joule s work led to the concept that all forms of energy are interchangeable, forming the basis of modern energy science. 
+                He died in 1889, and the joule (J) the unit of energy is named in his honor.
+            </p>
+            <h6> This marked the beggining of research on nuclear fission and its later impacts on the world </h6>
+            <p> Nuclear fission is the process where the nucleus of a heavy atom, like uranium, splits into two smaller nuclei, releasing a large amount of energy, radiation, 
+                and neutrons. This energy comes from the conversion of mass into energy, <span class="yellowline-span">explained by Einstein s E = mc²</span>. Fission powers 
+                nuclear reactors and atomic bombs by creating chain reactions that release energy quickly and efficiently. Joule s work connects to nuclear fission through the 
+                principle of energy conservation. He proved that mechanical work can become heat, showing that energy isn t created or destroyed, only transformed. This concept 
+                is key in fission, where a small amount of mass transforms into a massive amount of energy. Although Joule didn t study atoms directly, his experiments showed 
+                that all forms of energy are connected. His discoveries helped build the foundation that later allowed scientists to understand and harness the power of nuclear fission.
+            </p>
+            <figure>
+                <img src="images/nuclear_fission_infog_uk1.png" alt="diagram of nuclear fission in extremely simple terms neutron strikes an atom, it splits releasing energy and more neutrons" style="width:75%;">
+                <figcaption><a tabindex="13"  class="light-link" href="https://www.orano.group/en/unpacking-nuclear/nuclear-fission-and-nuclear-fusion-what-you-should-know" target="_blank">View this image at orano what should you know</a></figcaption>
+            </figure>
+        </div>
+        <div tabindex="14" id="item4"> 
+            <!-- this section is about einstein and the letter that he wrote alongside leo silzard to the usa to notify them that nazi germany may begin developemnt of their own atomic weaponry -->
+            <h2>1939:</h2>
+            <h3>With help of Leo Szilard, Albert Einstein wrote a letter to warn the U.S. government that Nazi Germany may begin to develope an atomic bomb</h3>
+            <h4>What did it lead to?</h4>
+            <h5>This prompted the U.S. to begin leaning into atomic research and how to build their own bomb </h5>
+            <p> Albert Einstein<br/>
+                Old Grove Rd.<br/>
+                Nassau Point<br/>
+                Peconic, Long Island<br/>
+                August 2nd, 1939<br/>
+                F.D. Roosevelt,<br/>
+                President of the United States,<br/>
+                White House<br/>
+                Washington, D.C.<br/>
+                Some recent work by E. Fermi and L. Szilard, which has been communicated to me in manuscript, leads me to expect that the element uranium may be turned into 
+                a new and important source of energy in the immediate future. Certain aspects of the situation which has arisen seem to call for watchfulness and, if necessary, 
+                quick action on the part of the Administration. I believe therefore that it is my duty to bring to your attention the following facts and recommendations:<br/>
+                In the course of the last four months it has been made probable—through the work of Joliot in France as well as Fermi and Szilard in America—that it may become 
+                possible to set up a nuclear chain reaction in a large mass of uranium by which vast amounts of power and large quantities of new radium-like elements would be 
+                generated. Now it appears almost certain that this could be achieved in the immediate future.
+                This phenomenon would also lead to the construction of bombs, and it is conceivable—though much less certain—that extremely powerful bombs of a new type may 
+                thus be constructed. A single bomb of this type, carried by boat and exploded in a port, might very well destroy the whole port together with some of the 
+                surrounding territory. However, such bombs might very well prove to be too heavy for transportation by air.
+                The United States has only very poor ores of uranium in moderate quantities. There is some good ore in Canada and the former Czechoslovakia, while the most 
+                important source of uranium is Belgian Congo.
+                In view of this situation you may think it desirable to have some permanent contact maintained between the Administration and the group of physicists working 
+                on chain reactions in America. One possible way of achieving this might be for you to entrust with this task a person who has your confidence and who could 
+                perhaps serve in an inofficial capacity. His task might comprise the following:<br/>
+                a)  to approach Government Departments, keep them informed of the further development, and put forward recommendations for Government action, giving particular 
+                attention to the problem of securing a supply of uranium ore for the United States.<br/>
+                b)  to speed up the experimental work, which is at present being carried on within the limits of the budgets of University laboratories, by providing funds, 
+                if such funds be required, through his contacts with private persons who are willing to make contributions for this cause, and perhaps also by obtaining the 
+                co-operation of industrial laboratories which have the necessary equipment.<br/>
+                I understand that Germany has actually stopped the sale of uranium from the Czechoslovakian mines which she has taken over. That she should have taken such 
+                early action might perhaps be understood on the ground that the son of the German Under-Secretary of State, von Weizsäcker, is attached to the 
+                Kaiser-Wilhelm-Institut in Berlin where some of the American work on uranium is now being repeated.<br/>
+                Yours very truly,<br/>
+                Albert Einstein</p>
+        </div>
+        <div tabindex="15" id="item5"> 
+            <!-- This section is about the infamous manhattan project which cause the bombings of hiroshima and nagasaki -->
+            <h2>1942:</h2>
+            <h3>The <span class="yellowline-span">Manhattan Project</span> was established</h3>
+            <h4> What does that mean?</h4>
+            <h5>The U.S. launched a top secret program to build nuclear weapons bringing their top scientists together</h5>
+            <p> The Manhattan Project was a top-secret World War II initiative by the United States to develop the world s first atomic bombs, driven by fears that Nazi Germany 
+                might create such weapons first. The project began after physicists Leo Szilard and Albert Einstein warned President Franklin D. Roosevelt in 1939 that recent 
+                discoveries in nuclear fission could lead to an extremely powerful new bomb. In response, Roosevelt created the Advisory Committee on Uranium, which later e
+                volved into a full-scale military and scientific operation called the Manhattan Engineer District, led by <span class="yellowline-span">Brigadier General Leslie Groves</span>. With the U.S. 
+                formally entering WWII after the attack on Pearl Harbor, the project gained urgency and massive support. Thousands of scientists, engineers, and workers—many 
+                unaware of the project s full purpose—joined a coordinated nationwide effort to explore two paths toward building an atomic bomb: one using uranium-235 and the 
+                other using plutonium-239, a man-made element created in nuclear reactors.</p>
+            <h6>This marks the begining of Nuclear testing, and atomic research / developement</h6>
+            <p>To support this effort, the U.S. government acquired three main sites using eminent domain, displacing thousands of residents, including Native American tribes 
+                and farming communities. Each site served a specific purpose. Oak Ridge, Tennessee became the project s headquarters and focused on uranium enrichment using 
+                three different methods. Hanford, Washington was built shortly after and housed large scale reactors and chemical plants to produce plutonium. Los Alamos, 
+                New Mexico became the center for bomb design and theoretical research, led by <span class="yellowline-span">physicist J. Robert Oppenheimer</span>. Each location was transformed into a self 
+                contained, secretive city with thousands of residents. The workforce was diverse, including men and women of different races and backgrounds, though racial 
+                segregation and discrimination were widespread, especially for African American workers, who were often limited to lower-paying labor roles. Despite the 
+                secrecy and complexity, the project advanced rapidly and laid the foundation for modern nuclear science, setting in motion one of the most impactful 
+                technological efforts in history.</p>
+            <figure>
+                <img src="images/ThreePlacesMap.webp" alt="map of the three areas that the manhattan project took place" style="width:100%">
+                <figcaption><a tabindex="16" class="light-link" href="https://www.nps.gov/mapr/learn/manhattan-project.htm" target="_blank">View this image at manhattan project gov</a></figcaption>
+            </figure>
+        </div>
+        <div tabindex="17" id="item6"> 
+            <!-- this is the section that talks about the first atomic bomb actually detonated in the trinity test by the usa right before the two bombs were dropped on japan -->
+            <h2>1945:</h2>
+            <h3> The first atomic bomb was detonated (the trinity test)</h3>
+            <h4>Key features:</h4>
+            <ol>
+                <li><h5>The plutonium core implosion method worked</h5></li>
+                <li><h5>Nuclear fission bombs do work</h5></li>
+                <li><h5>The proof that nuclear bombs work changed warefare forever</h5></li>
+            </ol>
+            <p>In July 1945, the Manhattan Project reached its climax with the first <span class="redline-span">successful test of a nuclear weapon</span>. Conducted in the Jornada del Muerto desert of New 
+                Mexico, the test code-named Trinity was the result of three years of scientific research and engineering. Led by J. Robert Oppenheimer, the test used a 
+                plutonium implosion device known as the “Gadget” the same design later used in the bomb dropped on Nagasaki. To prepare for the test, workers constructed roads, 
+                wiring systems, and a base camp in the remote desert. A massive steel container called Jumbo was built to contain the plutonium if the bomb failed to detonate, 
+                though it was ultimately not used. Despite setbacks such as failed test runs, stormy weather, and political pressure from President Truman, who was waiting on 
+                the results to guide U.S. strategy in the war. The team moved forward with the final test. The bomb was detonated at 5:29 AM on July 16, 1945, producing a blast 
+                equivalent to <span class="redline-span">15 to 20 kilotons of TNT</span>. The explosion destroyed the test tower, created a crater of radioactive glass known as trinitite, and lit the sky in 
+                colors described as more brilliant than midday sun. Soldiers and scientists watched from several miles away in awe and fear. Though the blast was felt in towns 
+                across the state, officials initially claimed it was a munitions accident. Only after the atomic bombings of Japan was the test s true nature made public. Many 
+                involved celebrated the technical success, but others such as Leo Szilard were already questioning the ethical consequences of using nuclear weapons, having 
+                previously attempted to petition the U.S. government to warn Japan before any use.</p>
+            <h6> How did it affect the American people though? </h6>
+            <p>The test also had long-term consequences for local communities, especially the Tularosa Basin Downwinders, who lived downwind of the explosion site. 
+                Residents of nearby counties were <span class="redline-span">never warned or evacuated and were likely exposed to dangerous levels of radiation</span>. Fallout contaminated crops, livestock, 
+                and water supplies, and many people unknowingly consumed radioactive food. Over time, these communities reported high rates of cancer, birth defects, and 
+                chronic illness, along with epigenetic effects that may have passed radiation related health problems to future generations. Despite the severe health impacts, 
+                no federal study was conducted at the time to assess the damage. The Downwinders have also faced significant economic and emotional hardship. Many lack access 
+                to adequate medical care, and the costs of treatment have strained already low household incomes in the affected counties. The psychological toll has been deep, 
+                with many residents reporting a loss of trust, cultural disconnection, and generational trauma. To this day, the Tularosa Downwinders are excluded from the 
+                Radiation Exposure Compensation Act (RECA), which provides payments to other radiation-affected groups. Activists like Tina Cordova have spent years fighting 
+                for their inclusion, and a Senate Judiciary Committee hearing was finally held in 2018. Still, no legislation has passed. For the Downwinders, recognition under 
+                RECA would offer long overdue justice and acknowledgment of the price they paid as unwitting participants in the dawn of the nuclear age.</p>
+            <br/>
+            <br/>
+            <figure>
+                <img src="images/Trinity Test Shot .016 Sec July 16 1945.jpg" alt="image of the trinity test detonation at .016 seconds" style="width:19%">
+                <img src="images/Trinity Test Shot .025 Sec July 16 1945.jpg" alt="image of the trinity test detonation at .025 seconds" style="width:19%">
+                <img src="images/Trinity Test Shot .053 Sec July 16 1945.jpg" alt="image of the trinity test detonation at .053 seconds" style="width:19%">
+                <img src="images/Trinity Test Shot .1 Sec July 16 1945.jpg" alt="image of the trinity test detonation at .1 seconds" style="width:19%">
+                <img src="images/Trinity Test Shot 20 Sec July 16 1945.jpg" alt="image of the trinity test detonation at 20 seconds" style="width:19%">
+                <figcaption><a tabindex="18" class="dark-link" href="https://ahf.nuclearmuseum.org/ahf/history/trinity-test-1945/" target="_blank">Veiw these images at the trinity test atomic heritage foundation</a></figcaption>
+            </figure>
+        </div>
+        <div tabindex="19" id="item7"> 
+            <!-- this section is fianlly about the bombings of hiroshima an nagasaki themselves -->
+            <h2>1945:</h2>
+            <h3>The U.S. dropped 2 bombs on Japanese cities Hiroshima and Nagasaki</h3>
+            <h4>What happened?</h4>
+            <ol>
+                <li><h5>The U.S. proved the dangerous nature of nuclear bombs</h5></li>
+                <li><h5>This forced Japan to surrender to the U.S. ending their part in the second world war</h5></li>
+                <li><h5>This marked the beggining of Nuclear testing and weaponism</h5></li>
+            </ol>
+            <p>In the final days of World War II, the United States made the unprecedented decision to use atomic bombs to force Japan s surrender. On August 6, 1945, a U.S. 
+                B-29 bomber, the Enola Gay, dropped the world s first deployed atomic bomb, "Little Boy" on the Japanese city of Hiroshima. The bomb, made from uranium-235, 
+                exploded with the force of roughly 12,000 to 15,000 tons of TNT, instantly killing around 80,000 people and leveling five square miles of the city. Despite the 
+                destruction, Japan did not immediately surrender. Three days later, on August 9, a second B-29 bomber, Bockscar, dropped a plutonium-based bomb, "Fat Man," on 
+                Nagasaki. The bomb produced a 22 kiloton explosion, killing an estimated 40,000 people instantly. The city's mountainous terrain helped reduce the spread of 
+                destruction to about 2.6 square miles. The development and use of these bombs were the culmination of the Manhattan Project, a secret U.S. government initiative 
+                launched in the early 1940s, partly in response to fears that Nazi Germany was developing nuclear weapons. Led by physicist J. Robert Oppenheimer and 
+                coordinated by the U.S. Army Corps of Engineers, the project produced the key<span class="yellowline-span"> fission materials uranium 235 and plutonium 239, and tested its first bomb at the 
+                Trinity site in New Mexico</span>
+                in July 1945. By then, Germany had surrendered, but Japan remained determined to fight, having inflicted significant casualties on 
+                Allied forces even in the final months of the war. The Japanese government rejected the Potsdam Declaration, which had warned of “prompt and utter destruction” 
+                if they did not surrender unconditionally.</p>
+            <h6>Why not ust do a ground millitary invasion?</h6>
+            <p> Faced with the possibility of a long and bloody ground invasion, codenamed Operation Downfall, President Harry Truman opted to use the atomic bomb instead. 
+                His advisors estimated that an invasion could cost up to a million American lives, a projection that heavily influenced his decision. While some leaders and 
+                scientists including General Dwight Eisenhower, Secretary of War Henry Stimson, and several Manhattan Project physicists expressed moral concerns about 
+                using the bomb, others, such as Secretary of State James Byrnes, believed the bomb would not only end the war quickly but also establish the U.S. as a 
+                global superpower in the postwar era. The second bomb, dropped on Nagasaki, was <span class="yellowline-span">not only intended to force surrender but also to send a clear geopolitical 
+                message to the Soviet Union</span>, which had just entered the war against Japan. On August 15, 1945, Japan s Emperor Hirohito publicly announced his nation s 
+                unconditional surrender, citing the “cruel bomb” as a key reason. The official surrender was signed on September 2, marking the end of World War II. While the 
+                bombings effectively brought the war to a close, the human cost was catastrophic. Death toll estimates range from 70,000 to 135,000 in Hiroshima and 60,000 to 
+                80,000 in Nagasaki, with thousands more suffering from long-term effects of radiation exposure, including cancer, birth defects, and other chronic health 
+                conditions. The bombings of Hiroshima and Nagasaki remain some of the most devastating and controversial events in modern history, ushering in the nuclear 
+                age and forever changing the nature of warfare.</p>
+            <figure>
+                <img src="images/Little Boy.jpg" alt="image of little boy the nuclear bomb dropped on hiroshima" style="width:45%;">
+                <img src="images/Fat Man-1024x768.jpg" alt="image of fat man the nuclear bomb that was dropped on Nagasaki" style="width:40%;">
+                <figcaption><a tabindex="20" class="light-link" href="https://ahf.nuclearmuseum.org/ahf/history/science-behind-atom-bomb/" target="_blank">Veiw these images at atomic heritage foundation </a></figcaption>
+            </figure>
+        </div>
+        <div tabindex="21" id="item8"> 
+            <!-- this section talks about the first hydogen bomb made discovered and tested -->
+            <h2>1952:</h2>
+            <h3>The first hydrogen bomb was tested (operation Ivy)</h3>
+            <h4>What happened?</h4>
+            <ol>
+                <li><h5>The first thermo nuclear bomb was tested</h5></li>
+                <li><h5>The hydrogen bomb used nuclear fission in addition to nuclear fusion</h5></li>
+                <li><h5>Fission and fusion generated a much more destructive power, over 1,000 time stronger than the bombs dropped on Hiroshima and Nagasaki</h5></li>
+            </ol>
+            <p> 
+                Following the success of the atomic bomb during World War II, the United States faced a new question: whether to pursue an even more powerful weapon the 
+                hydrogen bomb, or thermonuclear bomb. The idea for such a weapon was not new; scientists like Hans Bethe had theorized in the 1930s that stars derived their 
+                energy from thermonuclear reactions, and Enrico Fermi later suggested that these reactions could be ignited by the extreme heat produced in a fission explosion. 
+                During the Manhattan Project, research into hydrogen bombs was secondary to building fission weapons, but physicists such as Edward Teller continued exploring 
+                the possibility. By the late 1940s, however, the debate reignited especially after the Soviet Union tested its first atomic bomb in 1949, catching U.S. 
+                intelligence off guard and stoking fears of nuclear parity or even superiority. This Soviet breakthrough intensified the U.S. urgency to maintain nuclear 
+                dominance. President Harry Truman, under pressure from the military and scientific communities, approved a crash program in early 1950 to develop a hydrogen 
+                bomb. This came despite opposition from prominent scientists, including Robert Oppenheimer and the General Advisory Committee, who warned of the bomb s 
+                potential for mass civilian destruction and questioned the morality of escalating the arms race. In contrast, Teller and others argued that the U.S. needed 
+                the “Super” bomb to deter the Soviets and retain strategic advantage. Research accelerated, and by November 1, 1952, the U.S. tested the first thermonuclear 
+                device, Ivy Mike, at Enewetak Atoll in the Pacific. The explosion<span class="redline-span"> released energy equivalent to 10 megatons of TNT, over 1,000 times more powerful than the 
+                Hiroshima bomb</span>. However, the Ivy Mike device used liquid deuterium and required large refrigeration equipment, making it impractical for military deployment. 
+            </p>
+            <h6>Was it only the U.S. working on a hydrogen bomb</h6>
+            <p>The scientific breakthrough that made a deliverable hydrogen bomb possible came from the Teller Ulam design, developed in 1951. This method used radiation 
+                implosion to compress and ignite solid thermonuclear fuel, allowing the production of compact, deployable hydrogen bombs. Following successful experimental 
+                tests during Operation Greenhouse and Operation Ivy, the U.S. quickly moved forward with weaponized designs during Operation Castle. In the meantime, the Soviet 
+                Union, having obtained information through espionage by scientists like Klaus Fuchs developed its own hydrogen bomb and tested it in 1953, just one year after 
+                Ivy Mike. The nuclear arms race had officially escalated, with both nations now capable of producing weapons of previously unimaginable destructive power. This 
+                competition reached its symbolic peak in 1961, when the Soviet Union detonated the Tsar Bomba, the most powerful nuclear weapon ever tested. With a yield of 
+                around 50 megatons, it was <span class="redline-span">more than 3,000 times more powerful than the Hiroshima bomb and five times greater than the Ivy Mike test</span>. Unlike the American 
+                hydrogen bombs, the Tsar Bomba was built as a show of force during the Cold War and was never intended for battlefield use. Its explosion created a shockwave 
+                that circled the Earth multiple times and shattered windows over 500 miles away. The development of the Tsar Bomba demonstrated the extreme ends of nuclear 
+                weapons technology and highlighted how the decision to pursue thermonuclear bombs beginning with Truman s approval in 1950—had set the stage for decades of 
+                nuclear arms buildup, culminating in a global doctrine of mutually assured destruction that shaped international politics for the remainder of the 20th century.</p>
+            <figure>
+                <img src="images/Castle Bravo.jpg" alt="image of a mushroom cloud from the explosion of the first hydrogen bomb ever" style="width:25%;">
+                <figcaption><a tabindex="22" class="dark-link" href="https://ahf.nuclearmuseum.org/ahf/history/hydrogen-bomb-1950/" target="_blank">View this image at nuclear museum hydrogen bombs</a></figcaption>
+            </figure>
+        </div>
+        <div tabindex="23" id="item9"> 
+            <!-- this final section talks about the cold war arms race between the US and USSR and the USSRs 'tsar bomba' a 50 megaton device capable of mass destruction-->
+            <h2>1947-1991:</h2>
+            <h3>The cold wars arms race began shortly after the first hydrogen bomb was detonated</h3>
+            <h5>The U.S. and USSR began testing and developing better, lighter, and more destructful nuclear arms while threatening eachother of mass destruction</h5>
+            <p> The nuclear arms race during the Cold War was a period of intense competition between the United States and the Soviet Union to develop and stockpile nuclear 
+                weapons. It began shortly after World War II, especially after the USSR successfully tested its first atomic bomb in 1949, ending the U.S. s monopoly on nuclear 
+                power. Both nations raced to create more powerful bombs, including the hydrogen bomb, and build massive arsenals capable of destroying entire cities. </p>
+            <p>By the 1960s, the concept of Mutually Assured Destruction (MAD) took hold meaning if either side launched a nuclear attack, both would be completely destroyed. 
+                This kept full scale nuclear war at bay, but tensions remained high during events like the Cuban Missile Crisis in 1962. Over time, efforts to reduce the risk 
+                of war led to arms control treaties such as SALT, START, and the Non Proliferation Treaty, though the threat of nuclear weapons continued to shape global 
+                politics through the end of the Cold War in 1991.</p>
+            <h6> these videos may help you understand better:</h6>
+            <figure>
+                <iframe tabindex="24" width="560" height="315" src="https://www.youtube.com/embed/WXPwiwdqYo4?si=S1sIdCkbb3rKmFLh" title="YouTube video player" frameborder="0" allow="accelerometer; 
+                autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width:100%;"></iframe>
+                <br/>
+                <br/>
+                <figcaption> <a tabindex="25" class="fig-link" href="https://www.youtube.com/watch?v=WXPwiwdqYo4" target="_blank">Go to the first youtube video</a></figcaption>
+            </figure>
+            <br/>
+            <figure>
+                <iframe tabindex="26" width="560" height="315" src="https://www.youtube.com/embed/NF3u8Ju9aAg?si=ZSmLd6UalT8VoWna" title="YouTube video player" frameborder="0" allow="accelerometer; 
+                autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width:100%;"></iframe>
+                <br/>
+                <br/>
+                <figcaption><a tabindex="27" class="fig-link" href="https://www.youtube.com/watch?v=NF3u8Ju9aAg" target="_blank">Go to the second youtube video</a></figcaption>
+            </figure>
+        </div>
+        <div id="item10"> <h6>From the beggining to current day</h6> </div>
+    </div></main>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <!-- this is my footer with the link to my socials in it my sources are all in the comment and my copywrite  -->
+    <footer>
+        <ul>
+            <!--<li><a class="footer-link" href="https://ahf.nuclearmuseum.org/ahf/history/soviet-atomic-program-1946/ " target="_blank">Atomic heritage foundation </a></li>
+            <li><a class="footer-link" href="https://www.iaea.org/topics/nuclear-science" target="_blank">International atomic agency</a></li>
+            <li><a class="footer-link" href="https://www.bbc.co.uk/bitesize/guides/zgq4jxs/revision/1" target="_blank">BBC bitesize on radioactive decay</a></li>
+            <li><a class="footer-link" href="http://hyperphysics.phy-astr.gsu.edu/hbase/Nuclear/nuccon.html" target="_blank">Hyperphysics GSU </a></li>
+            <li><a class="footer-link" href="https://www.nrc.gov/reading-rm/basic-ref/students/for-educators/01.pdf" target="_blank">Nuclear regulatory commission</a></li>
+            <li><a class="footer-link" href="https://www.khanacademy.org/science/physics/quantum-physics/nuclei-topic" target="_blank">Khan academy nuclear physics</a></li>
+            <li><a class="footer-link" href="https://www.nobelprize.org/prizes/physics/1903/becquerel/biographical/" target="_blank">The nobel prize on berequel</a></li>
+            <li><a class="footer-link" href="https://earthhow.com/radioactive-decay-isotopes/" target="_blank">Radioactive decay isotopes</a></li>
+            <li><a class="footer-link" href="https://www.pbs.org/wgbh/nova/einstein/lrk-hand-emc2expl.html" target=_blank>nova einsteins e=mc^2 explained</a></li>
+            <li><a class="footer-link" href="https://www.amnh.org/exhibitions/einstein/energy/emc2" target=_blank>american museum of natural history </a></li>
+            <li><a class="footer-link" href="https://bigthink.com/starts-with-a-bang/meaning-emc2/" target=_blank>Einsteins famous equation</a></li>
+            <li><a class="footer-link" href="https://www.aps.org/apsnews/2009/12/joule-abstract-converting-mechanical-heat" target=_blank>Advancing physics on work to energy</a></li>
+            <li><a class="footer-link" href="https://www.orano.group/en/unpacking-nuclear/nuclear-fission-and-nuclear-fusion-what-you-should-know" target=_blank>Orano on nuclear fission</a></li>
+            <li><a class="footer-link" href="https://ahf.nuclearmuseum.org/ahf/key-documents/einstein-szilard-letter/" target=_blank>atomic heritage foundation Albert Einsteins letter</a></li>
+            <li><a class="footer-link" href="https://www.nps.gov/mapr/learn/manhattan-project.htm" target=_blank>the manhattan project</a></li>
+            <li><a class="footer-link" href="https://ahf.nuclearmuseum.org/ahf/history/trinity-test-1945/" target=_blank>atomic heritage foundation on the trinity test</a></li>
+            <li><a class="footer-link" href="https://www.history.com/articles/bombing-of-hiroshima-and-nagasaki" target=_blank>History of hiroshima and nagasaki</a></li>
+            <li><a class="footer-link" href="https://ahf.nuclearmuseum.org/ahf/history/hydrogen-bomb-1950/" target=_blank>atomic heritage foundation on hydrogen bomb</a></li>
+            <li><a class="footer-link" href="https://www.cfr.org/timeline/us-russia-nuclear-arms-control" target="_blank">nuclear arms race</a></li>
+            <li><a class="footer-link" href="https://ahf.nuclearmuseum.org/ahf/history/nuclear-fission/" target="_blank">atomic heratige foundation nuclear fission</a></li>
+            https://ahf.nuclearmuseum.org/ahf/history/science-behind-atom-bomb/ 
+            https://ahf.nuclearmuseum.org/ahf/history/hydrogen-bomb-1950/
+            https://armscontrolcenter.org/fact-sheet-thermonuclear-weapons/-->
+            <li><a tabindex="28" class="footer-link" href="https://www.instagram.com/" target="_blank"> Follow us on Instagram </a></li>
+            <li><a tabindex="29" class="footer-link" href="https://www.tiktok.com/" target="_blank"> Follow us on Tiktok </a></li>
+            <li><a tabindex="30" class="footer-link" href="https://www.facebook.com/" target="_blank"> Follow us on Facebook </a></li>
+            <li><a tabindex="31"class="footer-link" href="https://www.x.com/" target="_blank"> Follow us on X </a></li>
+        </ul>
+        <p> &copy; Learn about atomic bombs | all rights reserved </p>
+    </footer>
+</body>
+</html>
